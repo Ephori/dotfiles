@@ -1,0 +1,19 @@
+[core]
+  editor = nvim
+
+[pager]
+  diff = diff-so-fancy
+
+[color]
+  ui = true
+
+[color "diff"]
+  meta = normal 
+  frag = normal
+  func = normal
+  old = red
+  new = green
+
+[color "diff-highlight"]
+  oldHighlight = red
+  newHighlight = green

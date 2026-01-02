@@ -1,0 +1,110 @@
+{
+    // Colors
+    "editor.tokenColorCustomizations": {
+        "strings": "#858585",
+        "textMateRules": [
+            // Markdown --------------------------------
+            {
+                "scope": [
+                    "entity.name.section.markdown",
+                    "punctuation.definition.heading.markdown",
+                    "punctuation.definition.list.begin.markdown",
+                ],
+                "settings": {
+                    "foreground": "#769589"
+                }
+            },
+            // VSCode Json ------------------------------
+            {
+                "scope": [
+                    "support.type.property-name.json.comments",
+                    "entity.name.tag.yaml"
+                ],
+                "settings": {
+                    "foreground": "#7090AF",
+                }
+            },
+            // Comments
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "workbench.colorCustomizations": {
+        // Base
+        "editor.foreground": "#858585",
+        "scrollbar.shadow": "#00000000",
+        // StatusBar ------------------------------
+        "statusBar.background": "#353535",
+        "statusBar.foreground": "#959595",
+        // Tab
+        "tab.activeBorder": "#00000000",
+        "tab.activeBorderTop": "#00000000",
+        // Others ---------------------------------
+        "editorCursor.foreground": "#858585",
+        "tab.activeForeground": "#858585",
+        "tab.inactiveForeground": "#757575",
+        "gitDecoration.modifiedResourceForeground": "#83A598",
+        // Terminal -------------------------------
+        "terminal.background": "#1D2021",
+        "terminal.foreground": "#858585",
+        "terminal.selectionBackground": "#665C54",
+        "terminalCursor.foreground": "#858585",
+        "terminal.ansiBlack": "#1B1B1B",
+        "terminal.ansiRed": "#EA6962",
+        "terminal.ansiGreen": "#8AB485",
+        "terminal.ansiYellow": "#CDA668",
+        "terminal.ansiBlue": "#83A598",
+        "terminal.ansiMagenta": "#B16286",
+        "terminal.ansiCyan": "#689D6A",
+        "terminal.ansiWhite": "#A89984",
+        "terminal.ansiBrightBlack": "#928374",
+        "terminal.ansiBrightRed": "#EA6962",
+        "terminal.ansiBrightGreen": "#689D6A",
+        "terminal.ansiBrightYellow": "#CDA668",
+        "terminal.ansiBrightBlue": "#769589",
+        "terminal.ansiBrightMagenta": "#D3869B",
+        "terminal.ansiBrightCyan": "#898E86",
+        "terminal.ansiBrightWhite": "#EBDBB2"
+    },
+    // Settings
+    // Vim -----------------------------------------
+    "vim.leader": " ",
+    "vim.vimrc.enable": true,
+    "vim.cursorStylePerMode.normal": "line",
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    // Editor --------------------------------------
+    "editor.lightbulb.enabled": "off",
+    //  editor.fontFamily": "GeistMono Nerd Font",
+    "editor.fontFamily": "Geist Mono",
+    "editor.fontWeight": "400",
+    "editor.formatOnSave": true,
+    "editor.renderLineHighlight": "none",
+    "editor.cursorBlinking": "solid",
+    "editor.autoClosingBrackets": "never",
+    "editor.minimap.enabled": false,
+    "editor.guides.indentation": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    // Workbecnh ------------------------------------
+    "material-icon-theme.hidesExplorerArrows": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    // Others ---------------------------------------
+    "breadcrumbs.enabled": false,
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.density.editorTabHeight": "compact",
+}
