@@ -1,4 +1,4 @@
-----------------------  Package Manager  ---------------------- 
+-- Package Manager -----------------------------------------------------------------------------------------
 
 vim.pack.add({
 	{ src = "https://github.com/vague2k/vague.nvim" },
@@ -14,11 +14,13 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-mini/mini.hipatterns" },
 })
 
-
-----------------------  Colorscheme and Treesitter  ---------------------- 
+-- Colorschme and Treesitter  -----------------------------------------------------------------------------------------
 
 vim.cmd.colorscheme("catppuccin-macchiato")
 vim.cmd("hi Normal guifg=#A3A9C8")
+vim.cmd("hi @property guifg=#A3A9C8")
+vim.cmd("hi rainbow1 guifg=#769589")
+vim.cmd("hi String guifg=#769589")
 
 require("nvim-treesitter.install").update("all")
 require("nvim-treesitter.configs").setup({
@@ -30,7 +32,7 @@ require("nvim-treesitter.configs").setup({
 	},
 })
 
-----------------------  Comment Engine  ---------------------- 
+-- Comments Engine  ----------------------------------------------------------------------------------------
 
 local hipatterns = require("mini.hipatterns")
 hipatterns.setup({
@@ -46,7 +48,7 @@ hipatterns.setup({
 	},
 })
 
-----------------------  Completion Engine  ---------------------- 
+-- Completion Engine  ----------------------------------------------------------------------------------------
 
 require("blink.cmp").setup({
 	keymap = {
@@ -59,7 +61,7 @@ require("blink.cmp").setup({
 	},
 })
 
-----------------------  Basic Keymaps  ---------------------- 
+-- Basic Keymaps -----------------------------------------------------------------------------------------
 
 vim.g.mapleader = " "
 local m = vim.keymap.set
@@ -72,7 +74,7 @@ m("n", "1", ":bp<cr>")
 m("n", "2", ":bn<cr>")
 m("i", "jj", "<Esc>")
 
-----------------------  Neovim Keymaps  ---------------------- 
+-- Neovim Keymaps -----------------------------------------------------------------------------------------
 
 m("n", "<leader>e", ":Oil<CR>")
 m("n", "<leader>f", ":FzfLua files<CR>")
@@ -85,7 +87,7 @@ m("v", "<leader>fd", "zf")
 m("n", "<leader>fa", "za")
 m("v", "<C-_>", "gc", { remap = true })
 
-----------------------  Basic Options  ---------------------- 
+-- Basic Options -----------------------------------------------------------------------------------------
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -101,7 +103,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.showcmd = false
 
-----------------------  Neovim Options  ---------------------- 
+-- Neovim Options -----------------------------------------------------------------------------------------
 
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
@@ -110,7 +112,7 @@ vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.laststatus = 0
 
-----------------------  File Explorer ---------------------- 
+-- File Explorer  -----------------------------------------------------------------------------------------
 
 require("oil").setup({
 	view_options = {
@@ -120,7 +122,7 @@ require("oil").setup({
 	prompt_save_on_select_new_entry = false,
 })
 
-----------------------  LSP  ---------------------- 
+-- LSP -----------------------------------------------------------------------------------------
 
 require("mason").setup()
 require("mason-lspconfig").setup()
