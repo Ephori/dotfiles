@@ -16,7 +16,20 @@ vim.pack.add({
 
 -- Colorschme and Treesitter  -----------------------------------------------------------------------------------------
 
-vim.cmd.colorscheme("catppuccin-macchiato")
+require("kanagawa").setup({
+    undercurl = true,            -- enable undercurls
+    commentStyle = { italic = false },
+    functionStyle = {},
+    keywordStyle = { italic = false },
+    statementStyle = { bold = true },
+
+})
+
+require("catppuccin").setup({
+  no_italic = true,  -- Disable all italics
+})
+
+vim.cmd.colorscheme("kanagawa")
 vim.cmd("hi Normal guifg=#A3A9C8")
 vim.cmd("hi @property guifg=#A3A9C8")
 vim.cmd("hi rainbow1 guifg=#769589")
@@ -111,6 +124,14 @@ vim.opt.guicursor = "n-i-v:ver25"
 vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.laststatus = 0
+
+
+-- Cursor Fix -----------------------------------------------------------------------------------------
+vim.api.nvim_create_autocmd({"VimLeave", "VimSuspend"}, {
+  callback = function()
+    vim.opt.guicursor = "a:ver25"
+  end,
+})
 
 -- File Explorer  -----------------------------------------------------------------------------------------
 
