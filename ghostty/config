@@ -11,3 +11,4 @@ font-feature = -liga
 foreground = #A6ACC8
 palette = 2=#8DC2E1
 palette = 3=#8FACA3
+window-decoration = true
