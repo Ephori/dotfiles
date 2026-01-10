@@ -17,12 +17,17 @@ vim.pack.add({
 -- Colorschme and Treesitter  -----------------------------------------------------------------------------------------
 
 require("kanagawa").setup({
-    undercurl = true,            -- enable undercurls
+    undercurl = false,            -- enable undercurls
     commentStyle = { italic = false },
     functionStyle = {},
     keywordStyle = { italic = false },
     statementStyle = { bold = true },
 
+    overrides = function()
+      return {
+        ["@variable.builtin"] = { italic = false },
+      }
+    end
 })
 
 require("catppuccin").setup({
