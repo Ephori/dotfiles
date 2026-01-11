@@ -26,6 +26,7 @@ require("kanagawa").setup({
     overrides = function()
       return {
         ["@variable.builtin"] = { italic = false },
+        SignColumn = { bg = "none" },
       }
     end
 })
@@ -126,10 +127,8 @@ vim.opt.showcmd = false
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.guicursor = "n-i-v:ver25"
-vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.laststatus = 0
-
 
 -- Cursor Fix -----------------------------------------------------------------------------------------
 vim.api.nvim_create_autocmd({"VimLeave", "VimSuspend"}, {
